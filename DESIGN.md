@@ -38,7 +38,7 @@
 ## 5. Components
 
 ### Sidebar navigation
-- **Structure**: logo、首页 / AI 图像 / AI 电商三项主路由、会员升级卡。
+- **Structure**: logo、首页 / AI 图像 / AI 电商三项主路由、商品图上新快捷卡。
 - **States**: active 使用 `--accent-soft` 和 `--accent`；hover 为淡灰表面；键盘焦点为 3px 紫色环。
 - **Accessibility**: 原生 button、`aria-current=page`、44px 最小命中区域。
 
@@ -51,6 +51,11 @@
 - **Structure**: 商品图价值主张、双动作入口、带编号的商品视觉预览、三项能力介绍、三步上架工作流。
 - **States**: 主动作进入对应创作工作台；次动作进入 AI 电商能力矩阵。
 - **Accessibility**: 首屏语义化标题层级，所有转化动作均为原生 button。
+
+### Catalog case studies
+- **Structure**: 案例库标题、简短交付说明、箱包 / 3C / 珠宝 / 个护四张可点击案例卡；每张卡展示类目、上新目标、视觉交付与对应工作台入口。
+- **States**: hover 上移 4px、商品图放大并移动箭头；active 缩放 0.99；focus-visible 使用全局焦点环。
+- **Responsive**: 宽屏采用 7:5 的错列双栏，平板为等宽双栏，手机端收为单列，避免中文标题与交付清单出现孤字。
 
 ### Creation workspace
 - **Structure**: left tool rail、prompt/upload stage、right settings panel、生成结果区。
