@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>深域万象 · 无效上传 QA</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, sans-serif; }
+    body { margin: 0; padding: 24px; color: #10243e; background: #f7f6f2; }
+    main { width: min(100%, 960px); margin: auto; }
+    h1 { margin: 0 0 8px; font-size: 28px; }
+    p { color: #516173; }
+    #qa-status { display: inline-block; padding: 6px 10px; border-radius: 8px; background: #e8f1eb; font-weight: 700; }
+    pre { min-height: 180px; padding: 16px; border: 1px solid #c7d0cc; border-radius: 12px; overflow: auto; background: white; white-space: pre-wrap; }
+    iframe { position: fixed; width: 1px; height: 1px; border: 0; clip-path: inset(50%); }
+  </style>
+  <script src="qa-invalid.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>真实上传处理器 QA</h1>
+    <p>测试页仅驱动同源 iframe 中的真实商品输入与事件处理器。</p>
+    <p id="qa-status" role="status" aria-live="polite">RUNNING</p>
+    <pre id="qa-results" aria-label="QA 结果"></pre>
+    <iframe id="app-frame" title="深域万象真实应用测试容器"></iframe>
+  </main>
+</body>
+</html>

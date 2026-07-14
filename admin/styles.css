@@ -1,0 +1,11 @@
+:root { color: #111827; background: #f7f8fc; font-family: "PingFang SC", "Microsoft YaHei", Inter, system-ui, sans-serif; }
+* { box-sizing: border-box; }
+body { min-width: 320px; min-height: 100vh; margin: 0; display: grid; place-items: center; padding: 24px; }
+.notice-card { width: min(100%, 680px); padding: clamp(34px, 8vw, 72px); border: 1px solid #e8eaf2; border-radius: 24px; background: #fff; box-shadow: 0 18px 44px rgba(43, 49, 95, .12); }
+.eyebrow { margin: 0; color: #6957ff; font-size: 13px; font-weight: 700; letter-spacing: .12em; }
+.badge { display: inline-block; margin: 24px 0 0; padding: 6px 10px; border-radius: 999px; color: #5144e8; background: #f0eeff; font-size: 13px; font-weight: 700; }
+h1 { margin: 18px 0 0; font-size: clamp(32px, 6vw, 52px); line-height: 1.12; }
+.copy { margin: 20px 0 0; color: #6b7280; font-size: 16px; line-height: 1.7; }
+.back-link { display: inline-block; margin-top: 32px; padding: 12px 16px; border-radius: 12px; color: #fff; background: #6957ff; font-weight: 700; text-decoration: none; }
+.back-link:hover { background: #5144e8; }
+.back-link:focus-visible { outline: 3px solid rgba(105, 87, 255, .35); outline-offset: 3px; }
