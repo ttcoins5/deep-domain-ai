@@ -71,13 +71,13 @@ dialog { width:min(440px,calc(100vw - 32px)); padding:28px; border:0; border-rad
 .case-grid--examples.is-balanced .case-card--example { position:absolute; margin:0; transition:left .24s cubic-bezier(.22,1,.36,1),top .24s cubic-bezier(.22,1,.36,1),transform .24s cubic-bezier(.22,1,.36,1),box-shadow .24s; }
 .case-card--example .case-media { min-height:0; }
 .case-card--example .case-media img { width:100%; height:auto; object-fit:contain; }
-.case-card--example .case-copy { gap:6px; padding:13px 15px 14px; }
+.case-card--example .case-copy { gap:4px; padding:11px 15px 12px; }
 .case-card--example .case-copy small { font-size:12px; letter-spacing:.04em; }
-.case-card--example .case-copy strong { display:-webkit-box; min-height:2.7em; margin-top:3px; overflow:hidden; color:var(--ink); font-size:16px; line-height:1.35; letter-spacing:normal; -webkit-box-orient:vertical; -webkit-line-clamp:2; }
+.case-card--example .case-copy strong { display:-webkit-box; min-height:0; margin-top:2px; overflow:hidden; color:var(--ink); font-size:16px; line-height:1.35; letter-spacing:normal; -webkit-box-orient:vertical; -webkit-line-clamp:2; }
 .case-grid--examples .case-copy > span { display:none; }
 .home-case-section::before { display:block; margin:0 0 12px; color:var(--accent); font-size:13px; font-weight:800; letter-spacing:.08em; content:"案例展示"; }
 .platform-section > .section-intro { display:block; }
-.case-card--example .case-copy em { margin-top:4px; font-size:12px; line-height:1.55; }
+.case-card--example .case-copy em { margin-top:2px; font-size:12px; line-height:1.55; }
 .case-card--example .case-copy > span { margin-top:12px; font-size:12px; }
 dialog:has(.case-dialog) { width:min(820px,calc(100vw - 32px)); max-height:calc(100dvh - 32px); padding:28px; overflow:auto; }
 .case-dialog-head { padding-right:34px; }
@@ -114,5 +114,5 @@ dialog:has(.case-dialog)::-webkit-scrollbar { display:none; width:0; height:0; }
 .case-grid--examples.is-four-column .case-card--example { width:100%; position:relative; margin:0; }
 .case-grid--examples.is-four-column .case-media { aspect-ratio:1.15; }
 .case-grid--examples.is-four-column .case-media img { height:100%; object-fit:cover; }
-.case-grid--examples .case-copy strong { display:block; min-width:0; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+.case-grid--examples .case-copy strong { display:-webkit-box; min-width:0; overflow:hidden; line-height:1.45; white-space:normal; text-overflow:ellipsis; -webkit-box-orient:vertical; -webkit-line-clamp:2; }
 .case-grid--examples.is-four-column .case-copy { align-self:start; }
