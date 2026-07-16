@@ -100,9 +100,19 @@ dialog:has(.case-dialog) { width:min(820px,calc(100vw - 32px)); max-height:calc(
 
 .platform-hero { min-height:360px; padding-top:24px; padding-bottom:28px; }
 .platform-home { max-width:none; }
+.app-shell:not(.sidebar-collapsed) .sidebar { flex-basis:190px; width:190px; padding-left:14px; padding-right:14px; }
+.app-shell:not(.sidebar-collapsed) .sidebar .brand { margin-left:2px; margin-bottom:24px; }
+.app-shell:not(.sidebar-collapsed) .sidebar .brand b { font-size:20px; }
+.app-shell:not(.sidebar-collapsed) .sidebar .side-nav button { gap:10px; padding-left:10px; padding-right:10px; }
 .platform-visual { min-height:280px; }
 .platform-visual .product-shot { width:min(78%,360px); }
 .platform-visual .product-float { width:38%; }
 dialog:has(.case-dialog) .case-dialog-image { width:100%; max-width:100%; height:min(58vh,520px); object-fit:contain; }
 dialog:has(.case-dialog) { scrollbar-width:none; }
 dialog:has(.case-dialog)::-webkit-scrollbar { display:none; width:0; height:0; }
+.case-grid--examples.is-four-column { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px; columns:auto; align-items:stretch; }
+.case-grid--examples.is-four-column .case-card--example { width:100%; position:relative; margin:0; }
+.case-grid--examples.is-four-column .case-media { aspect-ratio:1.15; }
+.case-grid--examples.is-four-column .case-media img { height:100%; object-fit:cover; }
+.case-grid--examples .case-copy strong { display:block; min-width:0; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+.case-grid--examples.is-four-column .case-copy { align-self:start; }

@@ -242,9 +242,22 @@
   function layoutCaseGrid() {
     if (!caseGrid) return;
     const cards = [...caseGrid.querySelectorAll(".case-card--example")];
-    const columnCount = window.innerWidth <= 560 ? 1 : window.innerWidth <= 820 ? 2 : window.innerWidth >= 1500 ? 4 : 3;
+    const columnCount = window.innerWidth <= 560 ? 1 : window.innerWidth <= 820 ? 2 : caseGrid.clientWidth >= 1100 ? 4 : 3;
     const gap = 18;
     const cardWidth = (caseGrid.clientWidth - gap * (columnCount - 1)) / columnCount;
+    if (columnCount === 4) {
+      caseGrid.classList.add("is-four-column");
+      caseGrid.classList.remove("is-balanced");
+      caseGrid.style.height = "auto";
+      cards.forEach((card) => {
+        card.style.width = "";
+        card.style.left = "";
+        card.style.top = "";
+        card.style.position = "";
+      });
+      return;
+    }
+    caseGrid.classList.remove("is-four-column");
     caseGrid.classList.add("is-balanced");
     cards.forEach((card) => { card.style.width = `${cardWidth}px`; });
 
