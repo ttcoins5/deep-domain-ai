@@ -110,9 +110,4 @@ dialog:has(.case-dialog) { width:min(820px,calc(100vw - 32px)); max-height:calc(
 dialog:has(.case-dialog) .case-dialog-image { width:100%; max-width:100%; height:min(58vh,520px); object-fit:contain; }
 dialog:has(.case-dialog) { scrollbar-width:none; }
 dialog:has(.case-dialog)::-webkit-scrollbar { display:none; width:0; height:0; }
-.case-grid--examples.is-four-column { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px; columns:auto; align-items:stretch; }
-.case-grid--examples.is-four-column .case-card--example { width:100%; position:relative; margin:0; }
-.case-grid--examples.is-four-column .case-media { aspect-ratio:1.15; }
-.case-grid--examples.is-four-column .case-media img { height:100%; object-fit:cover; }
 .case-grid--examples .case-copy strong { display:-webkit-box; min-width:0; overflow:hidden; line-height:1.45; white-space:normal; text-overflow:ellipsis; -webkit-box-orient:vertical; -webkit-line-clamp:2; }
-.case-grid--examples.is-four-column .case-copy { align-self:start; }

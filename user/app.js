@@ -245,18 +245,6 @@
     const columnCount = window.innerWidth <= 560 ? 1 : window.innerWidth <= 820 ? 2 : caseGrid.clientWidth >= 1100 ? 4 : 3;
     const gap = 18;
     const cardWidth = (caseGrid.clientWidth - gap * (columnCount - 1)) / columnCount;
-    if (columnCount === 4) {
-      caseGrid.classList.add("is-four-column");
-      caseGrid.classList.remove("is-balanced");
-      caseGrid.style.height = "auto";
-      cards.forEach((card) => {
-        card.style.width = "";
-        card.style.left = "";
-        card.style.top = "";
-        card.style.position = "";
-      });
-      return;
-    }
     caseGrid.classList.remove("is-four-column");
     caseGrid.classList.add("is-balanced");
     cards.forEach((card) => { card.style.width = `${cardWidth}px`; });
@@ -270,15 +258,18 @@
     const targetHeight = Math.max(...columns.map((column) => Math.max(0, column.height - gap)));
     columns.forEach((column, columnIndex) => {
       const contentHeight = column.cards.reduce((total, item) => total + item.height, 0);
-      const extraGap = column.cards.length > 1 ? (targetHeight - contentHeight) / (column.cards.length - 1) : 0;
+      const balanceGap = column.cards.length > 1
+        ? Math.min(12, Math.max(0, (targetHeight - contentHeight - gap * (column.cards.length - 1)) / (column.cards.length - 1)))
+        : 0;
       let top = 0;
       column.cards.forEach((item, itemIndex) => {
         item.card.style.left = `${columnIndex * (cardWidth + gap)}px`;
         item.card.style.top = `${top}px`;
-        top += item.height + (itemIndex < column.cards.length - 1 ? extraGap : 0);
+        top += item.height + (itemIndex < column.cards.length - 1 ? gap + balanceGap : 0);
       });
     });
-    caseGrid.style.height = `${targetHeight}px`;
+    const laidOutHeight = Math.max(...cards.map((card) => (Number.parseFloat(card.style.top) || 0) + card.offsetHeight));
+    caseGrid.style.height = `${laidOutHeight}px`;
   }
   function scheduleCaseLayout() {
     window.cancelAnimationFrame(caseLayoutFrame);
